@@ -33,3 +33,12 @@ struct MemoEditorView: View {
         }
     }
 }
+
+#Preview {
+    let container = PreviewSampleData.container
+    let context = container.mainContext
+    let entries = try! context.fetch(FetchDescriptor<DiaryEntry>())
+    return MemoEditorView(entry: entries.first!)
+        .padding()
+        .modelContainer(container)
+}

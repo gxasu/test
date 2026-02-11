@@ -22,6 +22,11 @@ struct HashtagFlowView: View {
     }
 }
 
+#Preview {
+    HashtagFlowView(hashtags: ["旅行", "楽しい", "京都", "グルメ", "カフェ"])
+        .padding()
+}
+
 /// 簡易フローレイアウト（タグを横に並べて折り返す）
 struct FlowLayout: Layout {
     var spacing: CGFloat = 6

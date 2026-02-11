@@ -74,3 +74,12 @@ struct ReminderListView: View {
         modelContext.delete(reminder)
     }
 }
+
+#Preview {
+    let container = PreviewSampleData.container
+    let context = container.mainContext
+    let entries = try! context.fetch(FetchDescriptor<DiaryEntry>())
+    return ReminderListView(entry: entries.first!)
+        .padding()
+        .modelContainer(container)
+}

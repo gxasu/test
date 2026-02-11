@@ -69,3 +69,18 @@ struct CanvasBackgroundView: View {
         }
     }
 }
+
+#Preview("方眼紙") {
+    CanvasBackgroundView(background: .grid)
+        .frame(height: 300)
+}
+
+#Preview("ドット") {
+    CanvasBackgroundView(background: .dot)
+        .frame(height: 300)
+}
+
+#Preview("罫線") {
+    CanvasBackgroundView(background: .ruled)
+        .frame(height: 300)
+}

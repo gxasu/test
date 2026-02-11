@@ -70,3 +70,12 @@ struct ScheduleListView: View {
         modelContext.delete(schedule)
     }
 }
+
+#Preview {
+    let container = PreviewSampleData.container
+    let context = container.mainContext
+    let entries = try! context.fetch(FetchDescriptor<DiaryEntry>())
+    return ScheduleListView(entry: entries.first!)
+        .padding()
+        .modelContainer(container)
+}

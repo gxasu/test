@@ -139,3 +139,9 @@ struct LookbackYearsView: View {
         notificationManager.setLookbackYears(years)
     }
 }
+
+#Preview {
+    NavigationStack {
+        NotificationSettingsView(notificationManager: NotificationManager())
+    }
+}

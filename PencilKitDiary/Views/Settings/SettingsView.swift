@@ -45,3 +45,10 @@ struct SettingsView: View {
         UserDefaults.standard.set(locationName, forKey: "weatherLocation")
     }
 }
+
+#Preview {
+    SettingsView(
+        themeManager: ThemeManager(),
+        notificationManager: NotificationManager()
+    )
+}

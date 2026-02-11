@@ -34,3 +34,8 @@ struct WeatherBadgeView: View {
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
+
+#Preview {
+    WeatherBadgeView(weather: PreviewSampleData.sampleWeather)
+        .padding()
+}

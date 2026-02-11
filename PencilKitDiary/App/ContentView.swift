@@ -64,3 +64,14 @@ struct ContentView: View {
         }
     }
 }
+
+// MARK: - Preview
+
+#Preview {
+    ContentView(
+        themeManager: ThemeManager(),
+        notificationManager: NotificationManager(),
+        weatherService: WeatherService()
+    )
+    .modelContainer(PreviewSampleData.container)
+}
